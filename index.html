@@ -934,22 +934,7 @@
     </script>
 
     
-   <!-- 🔹 Chatbot Toggle Avatar -->
-<div id="jarvis-toggle">
-  <img src="/img/jarvis-avatar.png" alt="Jarvis Bot" />
-</div>
-
-<!-- 🔹 Chatbot Popup Iframe -->
-<div id="jarvis-popup">
-  <iframe 
-    src="https://hi5arun4ai-portfoliochatbot.hf.space"
-    width="400"
-    height="600"
-    style="border:none; border-radius:12px;"
-  ></iframe>
-</div>
-
-<style>
+ <style>
   /* Floating Avatar Button */
   #jarvis-toggle {
     position: fixed;
@@ -974,36 +959,112 @@
     transform: scale(1.1);
   }
 
+  /* Tooltip - permanently visible & centered */
+  #jarvis-toggle::after {
+    content: "Talk to Jarvis";
+    position: absolute;
+    bottom: 70px;
+    left: 50%; /* center */
+    transform: translateX(-50%); /* center align */
+    background: #333;
+    color: #fff;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+  }
+
   /* Popup container */
   #jarvis-popup {
     display: none;
     position: fixed;
     bottom: 90px;
     right: 20px;
-    width: 400px;
-    height: 600px;
+    width: 420px;
+    height: 640px;
     background: white;
     border-radius: 12px;
     box-shadow: 0px 6px 18px rgba(0,0,0,0.3);
     overflow: hidden;
     z-index: 9998;
   }
+
+  /* Close button */
+  #jarvis-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+  }
+  #jarvis-close:hover {
+    color: #000;
+  }
+
+  /* Iframe */
+  #jarvis-iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
 </style>
 
+<!-- Floating Button -->
+<div id="jarvis-toggle">
+  <img src="/img/Jarvis256.jpg" alt="Jarvis Avatar" />
+</div>
+
+<!-- Chat Popup -->
+<div id="jarvis-popup">
+  <span id="jarvis-close">&times;</span>
+  <iframe 
+    id="jarvis-iframe" 
+    src="https://hi5arun4ai-portfoliochatbot.hf.space" 
+    allow="clipboard-read; clipboard-write">
+  </iframe>
+</div>
+
 <script>
-  // Toggle behavior
   const toggleBtn = document.getElementById("jarvis-toggle");
   const popup = document.getElementById("jarvis-popup");
+  const closeBtn = document.getElementById("jarvis-close");
 
   toggleBtn.addEventListener("click", () => {
-    popup.style.display = popup.style.display === "none" ? "block" : "none";
+    if (popup.style.display === "none" || popup.style.display === "") {
+      popup.style.display = "block";
+      // hide tooltip
+      toggleBtn.style.setProperty("--tooltip-opacity", "0");
+    } else {
+      popup.style.display = "none";
+      // show tooltip again
+      toggleBtn.style.setProperty("--tooltip-opacity", "1");
+    }
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+    // show tooltip again when closed
+    toggleBtn.style.setProperty("--tooltip-opacity", "1");
   });
 </script>
+
+<style>
+  /* Use CSS variable for controlling tooltip opacity */
+  #jarvis-toggle::after {
+    opacity: var(--tooltip-opacity, 1); /* default visible */
+  }
+</style>
+
 
 
     
 </body>
 </html>
+
 
 
 
