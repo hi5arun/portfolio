@@ -1,1057 +1,400 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arun Ashokan - Presales Manager & Customer Success Leader</title>
-    <meta name="description" content="Strategic presales and customer success leader with 18+ years of experience in AI/ML-powered SaaS solutions">
-    <meta name="keywords" content="presales, customer success, AI, SaaS, solution architect, Chennai">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Arun Ashokan | AI-Driven Presales & Customer Success Manager</title>
+    <meta name="description" content="AI-Driven Presales & Customer Success Manager Enabling Enterprise SaaS Adoption. 18+ years in AI/ML-powered SaaS solutions.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Arun Ashokan | AI Portfolio">
+    <meta property="og:description" content="Explore Arun's 18+ yrs in AI SaaS leadership & innovation.">
+    <meta property="og:image" content="https://hi5arun.github.io/portfolio/img/og_image.png">
+    <meta property="og:url" content="https://hi5arun.github.io/portfolio/">
+    <meta property="og:type" content="website">
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#1A73E8',
+                            accent: '#34D399'
+                        }
+                    },
+                    animation: {
+                        'zoom-slow': 'zoom 12s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        zoom: {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.05)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- AOS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Alpine.js CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --accent-color: #3b82f6;
-            --text-primary: #1f2937;
-            --text-secondary: #6b7280;
-            --background: #ffffff;
-            --surface: #f8fafc;
-            --border: #e5e7eb;
-            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--text-primary);
-            background: var(--background);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        .header {
-            background: var(--gradient);
-            color: white;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="white" stop-opacity="0.1"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient></defs><circle cx="10" cy="10" r="3" fill="url(%23a)"/><circle cx="90" cy="10" r="3" fill="url(%23a)"/></svg>') repeat;
-            opacity: 0.1;
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
-
-        .profile-img {
-            width: 300px;
-            height: 400px;
-            border-radius: 50%;
-            border: 5px solid rgba(255, 255, 255, 0.2);
-            margin: 0 auto 30px;
-            overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
-
-        .profile-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .header h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .header .subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-
-        .header .description {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto 30px;
-            opacity: 0.8;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-
-        .contact-item:hover {
-            opacity: 0.8;
-        }
-
-        /* Navigation */
-        .nav {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 20px 0;
-        }
-
-        .nav li {
-            margin: 0 30px;
-        }
-
-        .nav a {
-            text-decoration: none;
-            color: var(--text-primary);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav a:hover, .nav a.active {
-            color: var(--primary-color);
-        }
-
-        /* Sections */
-        .section {
-            padding: 80px 0;
-        }
-
-        .section:nth-child(even) {
-            background: var(--surface);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 60px;
-            color: var(--text-primary);
-        }
-
-        /* Experience */
-        .timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--border);
-            transform: translateX(-50%);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 50px;
-            width: 50%;
-        }
-
-        .timeline-item:nth-child(odd) {
-            left: 0;
-            padding-right: 40px;
-            text-align: right;
-        }
-
-        .timeline-item:nth-child(even) {
-            left: 50%;
-            padding-left: 40px;
-        }
-
-        .timeline-content {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            position: relative;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content::after {
-            content: '';
-            position: absolute;
-            right: -10px;
-            top: 30px;
-            width: 0;
-            height: 0;
-            border: 10px solid transparent;
-            border-left-color: white;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content::after {
-            content: '';
-            position: absolute;
-            left: -10px;
-            top: 30px;
-            width: 0;
-            height: 0;
-            border: 10px solid transparent;
-            border-right-color: white;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            top: 30px;
-            width: 16px;
-            height: 16px;
-            background: var(--primary-color);
-            border-radius: 50%;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-dot {
-            right: -8px;
-        }
-
-        .timeline-item:nth-child(even) .timeline-dot {
-            left: -8px;
-        }
-
-        .job-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-
-        .company {
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-
-        .date {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .achievements {
-            list-style: none;
-        }
-
-        .achievements li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 8px;
-        }
-
-        .achievements li::before {
-            content: '▶';
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-        }
-
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .skill-category {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .skill-category h3 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            background: var(--surface);
-            color: var(--text-primary);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            border: 1px solid var(--border);
-        }
-
-        /* Stats */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .stat-item {
-            text-align: center;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-
-        .stat-label {
-            color: var(--text-secondary);
-            margin-top: 10px;
-        }
-
-        /* Contact */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .contact-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .contact-card i {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-
-        .contact-card h3 {
-            margin-bottom: 10px;
-            color: var(--text-primary);
-        }
-
-        .contact-card a {
-            color: var(--text-secondary);
-            text-decoration: none;
-        }
-
-        .contact-card a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--text-primary);
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-
-            .header .subtitle {
-                font-size: 1.1rem;
-            }
-
-            .contact-info {
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-            }
-
-            .nav ul {
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-            }
-
-            .nav li {
-                margin: 0;
-            }
-
-            .timeline::before {
-                left: 20px;
-            }
-
-            .timeline-item {
-                width: 100%;
-                left: 0;
-                padding-left: 50px;
-                padding-right: 0;
-                text-align: left;
-            }
-
-            .timeline-item .timeline-content::after {
-                left: -10px;
-                border-right-color: white;
-                border-left-color: transparent;
-            }
-
-            .timeline-dot {
-                left: 12px !important;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s, transform 0.6s;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Hover Effects */
-        .timeline-content:hover,
-        .skill-category:hover,
-        .stat-item:hover,
-        .contact-card:hover {
-            transform: translateY(-5px);
-            transition: transform 0.3s ease;
-        }
-
-        /* Scroll to top button */
-        .scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            cursor: pointer;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.3s ease;
-            z-index: 1000;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-        }
-        
-        .scroll-to-top.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .scroll-to-top:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
-        }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .card-hover { transition: transform 0.3s; }
+        .card-hover:hover { transform: scale(1.05); }
+        #chatbot-modal { transition: opacity 0.3s; }
+        /* Hamburger menu icon */
+        .hamburger div { transition: all 0.3s ease; }
+        .hamburger.open .line1 { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.open .line2 { opacity: 0; }
+        .hamburger.open .line3 { transform: rotate(-45deg) translate(7px, -7px); }
     </style>
 </head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="profile-img">
-                    <img src="img/profile-placeholder.jpg" alt="Arun Ashokan - Profile Photo" loading="lazy">
-                </div>
-                <h1>Arun Ashokan</h1>
-                <p class="subtitle">Manager – Presales | Customer Success Leader | AI & SaaS Solution Expert</p>
-                <p class="description">
-                    Strategic presales and customer success leader with 18+ years of experience, including 15+ years driving enterprise adoption of AI/ML-powered SaaS solutions (Generative AI, RAG, Agentic AI). Proven record in designing winning solutions for CDP, CVM, AI chatbots, and cloud contact centers.
-                </p>
-                <div class="contact-info">
-                    <a href="mailto:Hi5arun@gmail.com" class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        Hi5arun@gmail.com
-                    </a>
-                    <a href="tel:+919742376803" class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        +91-9742376803
-                    </a>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Chennai 600097
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-passport"></i>
-                        US B1 Business Visa (valid until 2027)
-                    </div>
+<body class="bg-white text-gray-900">
+    <!-- Header with Hamburger Menu -->
+    <header class="sticky top-0 bg-white/80 backdrop-blur z-50 border-b">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <span class="font-bold text-lg">Arun <span class="text-brand-primary">Ashokan</span></span>
+            <!-- Hamburger Menu for Mobile -->
+            <div x-data="{ open: false }" class="md:hidden">
+                <button @click="open = !open" class="hamburger flex flex-col gap-1.5 w-8 h-8 justify-center items-center">
+                    <div class="line1 w-8 h-1 bg-brand-primary rounded"></div>
+                    <div class="line2 w-8 h-1 bg-brand-primary rounded"></div>
+                    <div class="line3 w-8 h-1 bg-brand-primary rounded"></div>
+                </button>
+                <div x-show="open" class="absolute top-16 right-0 bg-white shadow-lg w-full p-4" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="transform translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-end="transform translate-x-full">
+                    <ul class="flex flex-col space-y-4 text-center">
+                        <li><a href="#about" @click="open = false" class="hover:text-brand-primary">About</a></li>
+                        <li><a href="#skills" @click="open = false" class="hover:text-brand-primary">Skills</a></li>
+                        <li><a href="#experience" @click="open = false" class="hover:text-brand-primary">Experience</a></li>
+                        <li><a href="#projects" @click="open = false" class="hover:text-brand-primary">Projects</a></li>
+                        <li><a href="#certifications" @click="open = false" class="hover:text-brand-primary">Certifications</a></li>
+                        <li><a href="#education" @click="open = false" class="hover:text-brand-primary">Education</a></li>
+                        <li><a href="#testimonials" @click="open = false" class="hover:text-brand-primary">Testimonials</a></li>
+                        <li><a href="#contact" @click="open = false" class="hover:text-brand-primary">Contact</a></li>
+                    </ul>
                 </div>
             </div>
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#about" class="hover:text-brand-primary">About</a></li>
+                <li><a href="#skills" class="hover:text-brand-primary">Skills</a></li>
+                <li><a href="#experience" class="hover:text-brand-primary">Experience</a></li>
+                <li><a href="#projects" class="hover:text-brand-primary">Projects</a></li>
+                <li><a href="#certifications" class="hover:text-brand-primary">Certifications</a></li>
+                <li><a href="#education" class="hover:text-brand-primary">Education</a></li>
+                <li><a href="#testimonials" class="hover:text-brand-primary">Testimonials</a></li>
+                <li><a href="#contact" class="hover:text-brand-primary">Contact</a></li>
+            </ul>
         </div>
     </header>
 
-    <nav class="nav">
-        <div class="container">
-            <ul>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#achievements" class="nav-link">Achievements</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+    <!-- Hero Section -->
+    <section id="hero" class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center" data-aos="fade-up">
+        <div data-aos="fade-right">
+            <h1 class="text-4xl font-bold">AI-Driven Presales &<br><span class="text-brand-primary">Customer Success Manager</span></h1>
+            <div class="mt-6 p-6 bg-gray-50 rounded-xl shadow">
+                <p class="text-gray-700">Strategic leader with 18+ years enabling enterprise adoption of AI/ML-powered SaaS solutions. Proven expertise in Conversational AI, CVM, CDP, and CCaaS.</p>
+            </div>
+            <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
+                <div class="p-4 bg-white rounded-xl shadow"><span class="text-2xl font-bold text-brand-primary">18+</span><p class="text-sm">Years</p></div>
+                <div class="p-4 bg-white rounded-xl shadow"><span class="text-2xl font-bold text-brand-primary">25%</span><p class="text-sm">Faster Cycles</p></div>
+                <div class="p-4 bg-white rounded-xl shadow"><span class="text-2xl font-bold text-brand-primary">40%</span><p class="text-sm">Win Rate↑</p></div>
+                <div class="p-4 bg-white rounded-xl shadow"><span class="text-2xl font-bold text-brand-primary">95%</span><p class="text-sm">On-time</p></div>
+                <div class="p-4 bg-white rounded-xl shadow"><span class="text-2xl font-bold text-brand-primary">60%</span><p class="text-sm">Retention↑</p></div>
+                <div class="p-4 bg-white rounded-xl shadow"><span class="text-2xl font-bold text-brand-primary">65%</span><p class="text-sm">Time↓</p></div>
+            </div>
+            <div class="mt-6 flex gap-3 flex-wrap">
+                <a href="mailto:Hi5arun@gmail.com" class="border border-brand-primary text-brand-primary px-4 py-2 rounded-lg flex items-center"><i data-lucide="mail" class="mr-2"></i>Email Me</a>
+                <button onclick="document.getElementById('chatbot-modal').classList.remove('hidden')" class="bg-brand-accent text-white px-4 py-2 rounded-lg flex items-center"><i data-lucide="bot" class="mr-2"></i>Talk to Jarvis</button>
+                <a href="tel:+91-9742376803" class="bg-brand-primary text-white px-4 py-2 rounded-lg flex items-center"><i data-lucide="phone" class="mr-2"></i>Call Me</a>
+            </div>
         </div>
-    </nav>
+        <div data-aos="fade-left">
+            <img src="img/Arun Ashokan.jpg" alt="Arun Ashokan" class="rounded-3xl shadow-xl w-full object-cover animate-zoom-slow">
+        </div>
+    </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title fade-in">Key Achievements</h2>
-            <div class="stats fade-in">
-                <div class="stat-item">
-                    <div class="stat-number">18+</div>
-                    <div class="stat-label">Years Experience</div>
+    <!-- About -->
+    <section id="about" class="py-16 bg-gray-50" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+            <p class="text-lg max-w-3xl mx-auto">AI-Driven Presales & Customer Success Manager Enabling Enterprise SaaS Adoption. With 18+ years of experience, I specialize in AI chatbots, CVM, CDP, and contact center platforms. Skilled in aligning technical solutions with GTM strategies, reducing churn, and driving ROI. US B1 Visa valid until 2027. Based in Chennai, India.</p>
+            <p class="mt-4 text-center"><a href="https://www.linkedin.com/in/hi5arun/" class="text-brand-primary hover:underline">LinkedIn</a> | <a href="https://github.com/hi5arun" class="text-brand-primary hover:underline">GitHub</a></p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-16 bg-white" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Skills & Tools</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Leadership & Management -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover" data-aos="zoom-in">
+                    <h3 class="text-xl font-semibold mb-4">Leadership & Management</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                        <li class="flex items-center"><i data-lucide="user-check" class="mr-2 text-brand-primary"></i>Team Leadership and Management</li>
+                        <li class="flex items-center"><i data-lucide="handshake" class="mr-2 text-brand-primary"></i>Client Relationship Management</li>
+                        <li class="flex items-center"><i data-lucide="target" class="mr-2 text-brand-primary"></i>Customer Success Strategy</li>
+                        <li class="flex items-center"><i data-lucide="users" class="mr-2 text-brand-primary"></i>Stakeholder Management</li>
+                        <li class="flex items-center"><i data-lucide="network" class="mr-2 text-brand-primary"></i>Cross-Functional Collaboration</li>
+                    </ul>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">25%</div>
-                    <div class="stat-label">Sales Cycle Reduction</div>
+                <!-- AI & Tech -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold mb-4">AI & Tech Expertise</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                        <li class="flex items-center"><i data-lucide="message-circle" class="mr-2 text-brand-primary"></i>Conversational AI, LLM/NLP</li>
+                        <li class="flex items-center"><i data-lucide="cpu" class="mr-2 text-brand-primary"></i>Agentic AI & AI Agents</li>
+                        <li class="flex items-center"><i data-lucide="settings" class="mr-2 text-brand-primary"></i>Solution Design & Automation</li>
+                        <li class="flex items-center"><i data-lucide="dollar-sign" class="mr-2 text-brand-primary"></i>ROI Analysis & TCO Optimization</li>
+                        <li class="flex items-center"><i data-lucide="workflow" class="mr-2 text-brand-primary"></i>Process Optimization & Efficiency</li>
+                    </ul>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">40%</div>
-                    <div class="stat-label">Technical Win Rate Improvement</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">95%</div>
-                    <div class="stat-label">On-time Delivery Rate</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">60%</div>
-                    <div class="stat-label">Retention Increase</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">65%</div>
-                    <div class="stat-label">Processing Time Reduction</div>
+                <!-- Tools -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover" data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="text-xl font-semibold mb-4">Tools & Platforms</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                        <li class="flex items-center"><i data-lucide="database" class="mr-2 text-brand-primary"></i>CRM (Salesforce, HubSpot)</li>
+                        <li class="flex items-center"><i data-lucide="bar-chart" class="mr-2 text-brand-primary"></i>Data Analysis (Excel, Power BI)</li>
+                        <li class="flex items-center"><i data-lucide="check-square" class="mr-2 text-brand-primary"></i>Project Management (Asana, Jira)</li>
+                        <li class="flex items-center"><i data-lucide="code" class="mr-2 text-brand-primary"></i>Python, SQL (Basic)</li>
+                        <li class="flex items-center"><i data-lucide="wrench" class="mr-2 text-brand-primary"></i>Other: Postman, Swagger, MS O365</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title fade-in">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item fade-in">
-                    <div class="timeline-content">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">Manager Presales</div>
-                        <div class="company">Worktual Innovations Private Limited, Chennai</div>
-                        <div class="date">Jun 2025 – Present</div>
-                        <ul class="achievements">
-                            <li>Leading presales initiatives for next-gen cloud communication SaaS platform</li>
-                            <li>Specializing in CDP, CVM, AI Chatbots, and AI-powered Contact Center solutions</li>
-                            <li>Delivered tailored demos and PoCs, reducing sales cycle by 25%</li>
-                            <li>Improved technical win rates by 40% through strategic solution positioning</li>
-                            <li>Enhanced proposal turnaround by 30% with reusable frameworks</li>
-                            <li>Collaborated with engineering teams on AI communication features (NLP, LLM)</li>
-                        </ul>
+    <!-- Experience -->
+    <section id="experience" class="py-16 bg-gray-50" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Professional Experience</h2>
+            <div class="space-y-12">
+                <!-- Worktual -->
+                <div x-data="{ expanded: false }" class="bg-white p-6 rounded-xl shadow-md card-hover" data-aos="fade-up">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-bold text-brand-primary">Manager Presales</h3>
+                            <p class="text-lg text-gray-700">Worktual Innovations, Chennai</p>
+                        </div>
+                        <span class="text-gray-500">Jun 2025 – Jul 2025</span>
                     </div>
+                    <ul class="mt-4 space-y-2 list-disc list-inside text-gray-700">
+                        <li>Led presales for cloud communication SaaS, focusing on CDP, CVM, AI Chatbots, and CCaaS.</li>
+                        <li>Delivered demos and PoCs, reducing sales cycle by 25% and improving win rates by 40%.</li>
+                        <li>Translated requirements into scalable architectures with APIs and cloud models.</li>
+                        <template x-if="expanded">
+                            <div>
+                                <li>Responded to RFPs with detailed blueprints and ROI insights.</li>
+                                <li>Aligned presales with GTM for seamless post-sale continuity.</li>
+                            </div>
+                        </template>
+                    </ul>
+                    <button @click="expanded = !expanded" x-text="expanded ? 'Read Less' : 'Read More'" class="text-brand-primary mt-4 hover:underline"></button>
                 </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-content">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">Senior Technical Consultant</div>
-                        <div class="company">Ushur Technologies Private Limited, Bengaluru</div>
-                        <div class="date">May 2019 – Mar 2025</div>
-                        <ul class="achievements">
-                            <li>Led enterprise-wide SaaS implementations with 95% on-time delivery</li>
-                            <li>Reduced churn by 25% and increased retention by 60% through data-driven health scoring</li>
-                            <li>Increased sales conversion rates by 45% with technical demonstrations</li>
-                            <li>Automated document processing for 3,000+ monthly emails with 95% accuracy</li>
-                            <li>Delivered end-to-end claims processing solutions, saving 3+ FTEs</li>
-                        </ul>
+                <!-- Ushur -->
+                <div x-data="{ expanded: false }" class="bg-white p-6 rounded-xl shadow-md card-hover" data-aos="fade-up">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-bold text-brand-primary">Senior Technical Consultant</h3>
+                            <p class="text-lg text-gray-700">Ushur Technologies, Bengaluru</p>
+                        </div>
+                        <span class="text-gray-500">May 2019 – Mar 2025</span>
                     </div>
+                    <ul class="mt-4 space-y-2 list-disc list-inside text-gray-700">
+                        <li>Led SaaS implementations with 95% on-time delivery.</li>
+                        <li>Developed health scoring, reducing churn by 25% and boosting retention by 60%.</li>
+                        <li>Automated document processing for 3,000 emails, saving 3+ FTEs.</li>
+                        <template x-if="expanded">
+                            <div>
+                                <li>Conducted QBRs and influenced product roadmap with NLP/LLM use cases.</li>
+                                <li>Created presales collateral and managed 7 accounts.</li>
+                                <li>Orchestrated demos/PoCs, increasing conversions by 45%.</li>
+                            </div>
+                        </template>
+                    </ul>
+                    <button @click="expanded = !expanded" x-text="expanded ? 'Read Less' : 'Read More'" class="text-brand-primary mt-4 hover:underline"></button>
                 </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-content">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">Manager Delivery and Configurations</div>
-                        <div class="company">HFN IT Services Private Limited, Bengaluru</div>
-                        <div class="date">Dec 2010 – Apr 2019</div>
-                        <ul class="achievements">
-                            <li>Deployed Nanoheal software across EMEA, US, and UK regions for Dell</li>
-                            <li>Reduced average call handling time by 40% through automation</li>
-                            <li>Awarded "Noble Contributor" for exceptional account management</li>
-                            <li>Enhanced system interoperability with CRM and third-party integrations</li>
-                        </ul>
+                <!-- HFN -->
+                <div x-data="{ expanded: false }" class="bg-white p-6 rounded-xl shadow-md card-hover" data-aos="fade-up">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-bold text-brand-primary">Manager Delivery and Configurations</h3>
+                            <p class="text-lg text-gray-700">HFN IT Services, Bengaluru</p>
+                        </div>
+                        <span class="text-gray-500">Dec 2010 – Apr 2019</span>
                     </div>
+                    <ul class="mt-4 space-y-2 list-disc list-inside text-gray-700">
+                        <li>Deployed Nanoheal software across regions, improving efficiency.</li>
+                        <li>Implemented automations for clients like Convergys and Sitel.</li>
+                        <li>Awarded "Noble Contributor" for account management.</li>
+                        <template x-if="expanded">
+                            <li>Reduced call handling time by 40% with automated solutions.</li>
+                        </template>
+                    </ul>
+                    <button @click="expanded = !expanded" x-text="expanded ? 'Read Less' : 'Read More'" class="text-brand-primary mt-4 hover:underline"></button>
                 </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-content">
-                        <div class="timeline-dot"></div>
-                        <div class="job-title">Customer Experience Roles</div>
-                        <div class="company">Sutherland Global Services & Redisolve Software</div>
-                        <div class="date">Aug 2006 – Dec 2010</div>
-                        <ul class="achievements">
-                            <li>Awarded Customer Experience Champion for exceptional service</li>
-                            <li>Recognized as Resolution Star of the Month multiple times</li>
-                            <li>Improved customer satisfaction through targeted solutions</li>
-                            <li>Specialized in HP laptop technical support for US region</li>
-                        </ul>
+                <!-- Additional Experience -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover" data-aos="fade-up">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-bold text-brand-primary">Additional Roles</h3>
+                            <p class="text-lg text-gray-700">Various</p>
+                        </div>
+                        <span class="text-gray-500">2006 – 2010</span>
                     </div>
+                    <ul class="mt-4 space-y-2 list-disc list-inside text-gray-700">
+                        <li>Senior Technical Support, Sutherland: Awarded CE Champion and Resolution Star.</li>
+                        <li>E-Relationship Associate, Redisolve: Improved CSAT and revenue growth.</li>
+                        <li>Technical Support, Sutherland: Resolved HP issues, increasing first-call resolution.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title fade-in">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-chart-line"></i> Presales & Solution Design</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Solution Design & Automation</span>
-                        <span class="skill-tag">ROI Analysis & TCO Optimization</span>
-                        <span class="skill-tag">Presales Solutioning</span>
-                        <span class="skill-tag">Technical Needs Assessment</span>
-                        <span class="skill-tag">RFP/RFI Response</span>
-                    </div>
+    <!-- Projects -->
+    <section id="projects" class="py-16 bg-white" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
+            <!-- Professional Projects -->
+            <h3 class="text-2xl font-semibold text-brand-primary mb-4">Professional Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover" data-aos="fade-up">
+                    <h3 class="text-xl font-bold text-brand-primary">Intelligent Document Processing (2023)</h3>
+                    <p class="mt-2 text-gray-700">Automated 3,000 emails/month with RPA and AI for Irish Life, saving 3 FTEs and reducing processing time.</p>
                 </div>
-
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-users"></i> Customer Success & Leadership</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Team Leadership</span>
-                        <span class="skill-tag">Customer Success Strategy</span>
-                        <span class="skill-tag">Churn Reduction</span>
-                        <span class="skill-tag">Client Relationship Management</span>
-                        <span class="skill-tag">Stakeholder Management</span>
-                    </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-brand-primary">Claim Status Updates (2021)</h3>
+                    <p class="mt-2 text-gray-700">Implemented multi-channel workflows, improving NPS and reducing inbound calls.</p>
                 </div>
-
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-robot"></i> AI & SaaS Technologies</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">CDP (Customer Data Platform)</span>
-                        <span class="skill-tag">CVM (Customer Value Management)</span>
-                        <span class="skill-tag">AI Chatbots</span>
-                        <span class="skill-tag">Contact Center (CCaaS)</span>
-                        <span class="skill-tag">Generative AI & RAG</span>
-                        <span class="skill-tag">NLP & LLM</span>
-                    </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold text-brand-primary">Smart Mail Categorization (2019)</h3>
+                    <p class="mt-2 text-gray-700">Automated email routing with 95% accuracy, saving 40% resources.</p>
                 </div>
-
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-tools"></i> Technical Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Salesforce & HubSpot</span>
-                        <span class="skill-tag">Power BI & Excel</span>
-                        <span class="skill-tag">Postman & Swagger</span>
-                        <span class="skill-tag">Python & SQL</span>
-                        <span class="skill-tag">Jira & Asana</span>
-                        <span class="skill-tag">Confluence & Zendesk</span>
-                    </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover" data-aos="fade-up">
+                    <h3 class="text-xl font-bold text-brand-primary">Cyberattack Bulk Messaging (2021)</h3>
+                    <p class="mt-2 text-gray-700">Deployed secure workflows for outreach, reducing calls and boosting NPS.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-brand-primary">End-to-End Claims Automation (2024)</h3>
+                    <p class="mt-2 text-gray-700">Integrated e-signing, reducing claim cycle from days to few days.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold text-brand-primary">Nanoheal Support Automation (2018)</h3>
+                    <p class="mt-2 text-gray-700">Automated fixes, reducing handle time by 40% and improving resolution.</p>
+                </div>
+            </div>
+            <!-- Personal Projects -->
+            <h3 class="text-2xl font-semibold text-brand-primary mb-4">Personal Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover" data-aos="fade-up">
+                    <h3 class="text-xl font-bold text-brand-primary">Personal AI Agent - Jarvis</h3>
+                    <p class="mt-2 text-gray-700">RAG-based AI assistant with speech recognition and automation. <a href="https://github.com/hi5arun" class="text-brand-primary">View on GitHub</a></p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-brand-primary">Portfolio Chat</h3>
+                    <p class="mt-2 text-gray-700">Interactive RAG chatbot for portfolio Q&A.</p>
+                    <button onclick="document.getElementById('chatbot-modal').classList.remove('hidden')" class="mt-2 bg-brand-accent text-white px-4 py-2 rounded-lg">Try the Chatbot</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="achievements" class="section">
-        <div class="container">
-            <h2 class="section-title fade-in">Certifications & Education</h2>
-            <div class="skills-grid">
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-certificate"></i> Certifications</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Ushur Certified Pro</span>
-                        <span class="skill-tag">AWS Cloud Practitioner (Expected Sep 2025)</span>
-                        <span class="skill-tag">Google Project Management (Expected Oct 2025)</span>
-                    </div>
+    <!-- Certifications -->
+    <section id="certifications" class="py-16 bg-gray-50" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover" data-aos="fade-up">
+                    <h3 class="text-xl font-semibold flex items-center"><i data-lucide="award" class="mr-2 text-brand-primary"></i>Ushur Certified Pro</h3>
                 </div>
-
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Bachelor of Engineering</span>
-                        <span class="skill-tag">Electrical and Electronics</span>
-                        <span class="skill-tag">Thangavelu Engineering College</span>
-                    </div>
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold flex items-center"><i data-lucide="cloud" class="mr-2 text-brand-primary"></i>AWS Cloud Practitioner</h3>
+                    <p class="text-sm text-gray-600">Expected Sep 2025</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-semibold flex items-center"><i data-lucide="briefcase" class="mr-2 text-brand-primary"></i>Google Project Management Certificate</h3>
+                    <p class="text-sm text-gray-600">Expected Oct 2025</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title fade-in">Get In Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-card fade-in">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <a href="mailto:Hi5arun@gmail.com">Hi5arun@gmail.com</a>
+    <!-- Education -->
+    <section id="education" class="py-16 bg-white" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Education</h2>
+            <div class="max-w-2xl mx-auto bg-gray-50 p-6 rounded-xl shadow-md card-hover" data-aos="fade-up">
+                <h3 class="text-xl font-semibold flex items-center"><i data-lucide="graduation-cap" class="mr-2 text-brand-primary"></i>Bachelor of Engineering in Electrical and Electronics</h3>
+                <p class="text-sm text-gray-600">Thangavelu Engineering College</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16 bg-gray-50" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Testimonials</h2>
+            <div x-data="{ slide: 0 }" class="relative overflow-hidden rounded-xl shadow-lg">
+                <div class="flex transition-transform duration-700" :style="'transform: translateX(-' + slide * 100 + '%)'">
+                    <div class="w-full flex-shrink-0 flex items-center justify-center bg-white"><img src="img/Aneri recommendation.png" class="w-full h-auto object-contain max-h-64 md:max-h-96" alt="Testimonial 1"></div>
+                    <div class="w-full flex-shrink-0 flex items-center justify-center bg-white"><img src="img/Anshita recommendation.png" class="w-full h-auto object-contain max-h-64 md:max-h-96" alt="Testimonial 2"></div>
+                    <div class="w-full flex-shrink-0 flex items-center justify-center bg-white"><img src="img/Eoghan recommendation.png" class="w-full h-auto object-contain max-h-64 md:max-h-96" alt="Testimonial 3"></div>
+                    <div class="w-full flex-shrink-0 flex items-center justify-center bg-white"><img src="img/Suman recommendation.png" class="w-full h-auto object-contain max-h-64 md:max-h-96" alt="Testimonial 4"></div>
                 </div>
-                <div class="contact-card fade-in">
-                    <i class="fas fa-phone"></i>
-                    <h3>Phone</h3>
-                    <a href="tel:+919742376803">+91-9742376803</a>
-                </div>
-                <div class="contact-card fade-in">
-                    <i class="fab fa-linkedin"></i>
-                    <h3>LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/hi5arun/" target="_blank">Connect with me</a>
-                </div>
-                <div class="contact-card fade-in">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Location</h3>
-                    <p>Chennai 600097, India</p>
+                <button @click="slide = (slide > 0) ? slide - 1 : 3" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-brand-primary text-white p-2 rounded-full" aria-label="Previous testimonial">‹</button>
+                <button @click="slide = (slide < 3) ? slide + 1 : 0" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-brand-primary text-white p-2 rounded-full" aria-label="Next testimonial">›</button>
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                    <template x-for="i in 4" :key="i">
+                        <button @click="slide = i - 1" :class="slide === i - 1 ? 'bg-brand-primary' : 'bg-gray-300'" class="w-3 h-3 rounded-full" :aria-label="'Go to testimonial ' + i"></button>
+                    </template>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Arun Ashokan. All rights reserved.</p>
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-white" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
+            <div class="flex justify-center space-x-8 flex-wrap gap-4">
+                <a href="mailto:Hi5arun@gmail.com" class="flex items-center text-brand-primary hover:underline"><i data-lucide="mail" class="mr-2"></i>Hi5arun@gmail.com</a>
+                <a href="tel:+91-9742376803" class="flex items-center text-brand-primary hover:underline"><i data-lucide="phone" class="mr-2"></i>+91-9742376803</a>
+                <a href="https://www.linkedin.com/in/hi5arun/" class="flex items-center text-brand-primary hover:underline"><i data-lucide="linkedin" class="mr-2"></i>LinkedIn</a>
+            </div>
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-gray-500 border-t">
+        <p>© 2025 Arun Ashokan | Built with 💡 + AI</p>
+        <a href="https://drive.google.com/uc?export=download&id=1WT1bzr0M_eLK9WXrUpdb36i26VXyxB3c" class="mt-2 inline-block bg-brand-primary text-white px-4 py-2 rounded-lg">Download Resume</a>
     </footer>
 
-    <!-- Scroll to top button -->
-    <button class="scroll-to-top" id="scrollToTop">
-        <i class="fas fa-arrow-up"></i>
+    <!-- Chatbot Floating Button -->
+    <button onclick="document.getElementById('chatbot-modal').classList.remove('hidden')" class="fixed bottom-4 right-4 bg-brand-accent p-2 rounded-full shadow-lg hover:bg-green-600">
+        <img src="img/Jarvis256.jpg" alt="Jarvis" class="w-12 h-12 object-contain rounded-full">
     </button>
+    <div id="chatbot-modal" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+        <div class="bg-white rounded-xl shadow-xl p-0 w-full max-w-md relative">
+            <button onclick="document.getElementById('chatbot-modal').classList.add('hidden')" class="absolute top-2 right-2 z-50 bg-red-500 text-white px-3 py-1 rounded-full hover:bg-red-600">×</button>
+            <iframe src="https://hi5arun4ai-portfoliochatbot.hf.space" class="w-full h-96 border rounded"></iframe>
+        </div>
+    </div>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Active navigation highlight
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                if (window.scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Add hover effects for interactive elements
-        document.querySelectorAll('.timeline-content, .skill-category, .stat-item, .contact-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px)';
-                this.style.transition = 'transform 0.3s ease';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-
-        // Scroll to top functionality
-        const scrollToTopBtn = document.getElementById('scrollToTop');
-        
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                scrollToTopBtn.classList.add('visible');
-            } else {
-                scrollToTopBtn.classList.remove('visible');
-            }
-        });
-        
-        scrollToTopBtn.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Counter animation for statistics
-        function animateCounters() {
-            const counters = document.querySelectorAll('.stat-number');
-            
-            counters.forEach(counter => {
-                const target = counter.textContent;
-                const numericTarget = parseInt(target.replace(/\D/g, ''));
-                const suffix = target.replace(/\d/g, '');
-                
-                if (numericTarget && !counter.classList.contains('animated')) {
-                    counter.classList.add('animated');
-                    let current = 0;
-                    const increment = numericTarget / 50;
-                    const timer = setInterval(() => {
-                        current += increment;
-                        if (current >= numericTarget) {
-                            counter.textContent = target;
-                            clearInterval(timer);
-                        } else {
-                            counter.textContent = Math.floor(current) + suffix;
-                        }
-                    }, 30);
-                }
-            });
-        }
-
-        // Trigger counter animation when stats section is visible
-        const statsSection = document.querySelector('#about');
-        if (statsSection) {
-            const statsObserver = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        setTimeout(animateCounters, 500);
-                        statsObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-            
-            statsObserver.observe(statsSection);
-        }
-
-        // Dynamic typing effect for the header subtitle
-        const subtitle = document.querySelector('.subtitle');
-        if (subtitle) {
-            const originalText = subtitle.textContent;
-            let typewriterActive = false;
-
-            function typeWriter(text, element, speed = 80) {
-                if (typewriterActive) return;
-                typewriterActive = true;
-                
-                element.textContent = '';
-                let i = 0;
-                
-                function type() {
-                    if (i < text.length) {
-                        element.textContent += text.charAt(i);
-                        i++;
-                        setTimeout(type, speed);
-                    } else {
-                        typewriterActive = false;
-                    }
-                }
-                type();
-            }
-
-            // Trigger typewriter effect when page loads
-            window.addEventListener('load', function() {
-                setTimeout(() => {
-                    typeWriter(originalText, subtitle, 80);
-                }, 1000);
-            });
-        }
-
-        // Console message for developers
-        console.log('%c👋 Hello Developer!', 'color: #2563eb; font-size: 20px; font-weight: bold;');
-        console.log('%cThanks for checking out my portfolio code!', 'color: #6b7280; font-size: 14px;');
-        console.log('%cFeel free to reach out: Hi5arun@gmail.com', 'color: #2563eb; font-size: 14px;');
+        AOS.init();
+        lucide.createIcons();
     </script>
-
-    
- <style>
-  /* Floating Jarvis Avatar Button */
-  #jarvis-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
-    z-index: 9999;
-  }
-
-  #jarvis-toggle img {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
-    transition: transform 0.2s ease;
-  }
-
-  #jarvis-toggle img:hover {
-    transform: scale(1.1);
-  }
-
-  /* Tooltip */
-  #jarvis-tooltip {
-    position: absolute;
-    bottom: 80px;
-    right: 20px;
-    background: #333;
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 14px;
-    white-space: nowrap;
-    box-shadow: 0px 3px 8px rgba(0,0,0,0.25);
-    z-index: 10000;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.25s ease, transform 0.25s ease;
-    pointer-events: none;
-  }
-
-  #jarvis-toggle:hover + #jarvis-tooltip {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Chatbot Popup */
-  #jarvis-popup {
-    display: none;
-    position: fixed;
-    bottom: 90px;
-    right: 20px;
-    width: 400px;
-    height: 600px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0px 6px 18px rgba(0,0,0,0.3);
-    overflow: hidden;
-    z-index: 9998;
-  }
-
-  /* Close Button */
-  #jarvis-close {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #555;
-    cursor: pointer;
-    z-index: 10000;
-  }
-
-  #jarvis-close:hover {
-    color: red;
-  }
-</style>
-
-<!-- Floating Jarvis Button (Image) -->
-<div id="jarvis-toggle">
-  <img src="img/Jarvis256.jpg" alt="Jarvis">
-</div>
-<div id="jarvis-tooltip">🤖 Talk to Jarvis</div>
-
-<!-- Chatbot Popup -->
-<div id="jarvis-popup">
-  <div id="jarvis-close">&times;</div>
-  <iframe 
-    src="https://hi5arun4ai-portfoliochatbottest.hf.space" 
-    width="100%" 
-    height="100%" 
-    frameborder="0"
-    style="border:none;">
-  </iframe>
-</div>
-
-<script>
-  const toggleBtn = document.getElementById("jarvis-toggle");
-  const popup = document.getElementById("jarvis-popup");
-  const closeBtn = document.getElementById("jarvis-close");
-  const tooltip = document.getElementById("jarvis-tooltip");
-
-  toggleBtn.addEventListener("click", () => {
-    popup.style.display = (popup.style.display === "none" || popup.style.display === "") ? "block" : "none";
-    tooltip.style.display = "none"; // Hide tooltip when chat opens
-  });
-
-  closeBtn.addEventListener("click", () => {
-    popup.style.display = "none";
-    tooltip.style.display = "block"; // Show tooltip again when chat closes
-  });
-</script>
-    
 </body>
 </html>
-
-
-
-
-
-
